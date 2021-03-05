@@ -1,0 +1,106 @@
+body {
+    background-color: #FFDE03;
+}
+
+h3 {
+    text-align: center;
+    font-size: 3em;
+}
+
+.book-container {
+    border: 1px solid black;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    border-radius: 15%;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2em 2em;
+    font-size: 1.5em;
+    background-color: #FF0266;
+
+}
+
+.book > * {
+    margin: 0.7em 0.7em;
+}
+
+.book div{
+    text-align: center;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.add-book {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border: 2px solid black;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    padding: 4em 4em;
+    background-color: #0336ff;
+    border-radius: 10%;
+}
+
+.add-book-card button {
+    width: 70px;
+    height: 70px;
+    font-size: 3em;
+    background-color: wheat;
+    border-radius: 10%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > * {
+    height: 1.6rem;
+    margin: 3em 1em;
+    
+}
+
+form input[type=submit]{
+    width: 50%;
+    align-self: center;
+
+}
+
+#remove-btn {
+    width: 40%;
+    background-color: Black;
+    color: white;
+    align-self: center;
+    margin-bottom: 1.5em;
+    border-radius: 5%;
+    border: none;
+    font-size: 0.75em;
+    padding: 0.8em 0.5em;
+}
