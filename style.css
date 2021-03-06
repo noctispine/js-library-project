@@ -1,105 +1,125 @@
 body {
-    background-color: #FFDE03;
+  font-family: "Nunito", sans-serif;
+  background: #1d976c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93f9b9,
+    #1d976c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #93f9b9,
+    #1d976c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 h3 {
-    text-align: center;
-    font-size: 3em;
+  text-align: center;
+  font-size: 4em;
 }
 
 .book-container {
-    width: 80%;
-    margin-left: 10%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .book {
-    display: flex;
-    height: 300px;
-    width: 300px;
-    border-radius: 15%;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 2em 2em;
-    font-size: 1.5em;
-    background-color: #FF0266;
-
+  display: flex;
+  height: 300px;
+  width: 300px;
+  border-radius: 15%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2em 2em;
+  font-size: 1.5em;
+  background-color: #4388a2;
 }
 
 .book > * {
-    margin: 0.7em 0.7em;
+  font-size: 2.2rem;
+  margin: 0.1em 0.1em;
 }
 
-.book div{
-    text-align: center;
+.book div {
+  text-align: center;
 }
 
-.overlay{
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(0,0,0,0.5);
-    width: 100%;
-    height: 100%;
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
 }
 
 .add-book {
-    display: none;
-    z-index: 1;
-    position: fixed;
-    left: 0;
-    top: 0;
-    border: 2px solid black;
-    left: 50%;
-    top: 20%;
-    transform: translateX(-50%);
-    padding: 4em 4em;
-    background-color: #0336ff;
-    border-radius: 10%;
+  display: none;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border: 2px solid black;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  padding: 2.5em 2.5em;
+  background-color: #0336ff;
+  border-radius: 10%;
 }
 
 .add-book-card button {
-    width: 70px;
-    height: 70px;
-    font-size: 3em;
-    background-color: wheat;
-    border-radius: 10%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 4rem;
+  background-color: rgb(248, 211, 142);
+  border-radius: 10%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 }
 
-
 form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  height: 2.5rem;
+  margin: 3.5rem;
+}
+
+.text-author-container{
     display: flex;
     flex-direction: column;
 }
 
-form > * {
-    height: 1.6rem;
-    margin: 3em 1em;
-    
+.text-author-container input{
+    margin: 1rem;
+    padding: 0.5rem;
 }
 
-form input[type=submit]{
-    width: 50%;
-    align-self: center;
-
+form input[type="submit"] {
+  width: 40%;
+  align-self: center;
+  font-size: 1.2em;
 }
 
 #remove-btn {
-    width: 40%;
-    background-color: Black;
-    color: white;
-    align-self: center;
-    margin-bottom: 1.5em;
-    border-radius: 5%;
-    border: none;
-    font-size: 0.75em;
-    padding: 0.8em 0.5em;
+  width: 40%;
+  background-color: Black;
+  color: white;
+  align-self: center;
+  margin-bottom: 1.5em;
+  border-radius: 5%;
+  border: none;
+  font-size: 0.75em;
+  padding: 0.8em 0.5em;
 }
