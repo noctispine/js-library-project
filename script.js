@@ -23,6 +23,7 @@ function addToLibrary(e) {
   formContainer.style.display = "none";
   let newBook = new Book();
   myLibrary.push(newBook);
+  setLocalStorage();
   render();
   form.reset();
   createAddCard();
@@ -65,7 +66,7 @@ function createBook(book) {
 
   removeBtn.addEventListener("click", () => {
     myLibrary.splice(myLibrary.indexOf(book), 1);
-    console.log(myLibrary);
+    setLocalStorage();
     render();
     createAddCard();
   });
@@ -95,4 +96,21 @@ function createAddCard() {
   }
 }
 
-createAddCard();
+// Local Storage
+
+function setLocalStorage() {
+  localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+}
+
+function loadLocalStorage() {
+  if (!localStorage.myLibrary) {
+    render();
+    createAddCard();
+  } else {
+    myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+    render();
+    createAddCard();
+  }
+}
+
+loadLocalStorage();
